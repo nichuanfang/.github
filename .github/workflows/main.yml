@@ -1,4 +1,4 @@
-name: generate
+name: generate and sync
 
 on:
   repository_dispatch:
