@@ -1,6 +1,22 @@
 name: bark notice
 
-on: workflow_call
+on:
+  workflow_call:
+    inputs:
+      title:
+        required: true   #通知标题
+        type: string
+      body:
+        required: true   #通知内容
+        type: string
+      sound: 
+        required: false   #通知声音
+        type: string
+        default: calypso
+#     secrets:
+#       BARK_KEY:
+#         required: true
+
 
 jobs:
   job1:
