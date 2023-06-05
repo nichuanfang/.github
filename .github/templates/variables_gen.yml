@@ -1,7 +1,7 @@
 # 同步仓库变量
 name: synchronize variables
-on:
-  # # 手动触发
+'on':
+  # 手动触发
   workflow_dispatch:
     inputs:
       logLevel:

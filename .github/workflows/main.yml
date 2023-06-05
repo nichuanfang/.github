@@ -52,14 +52,15 @@ jobs:
 
   # 更新变量
   sync_vars:
+    name: 手动触发synchronize_variables.yml
     runs-on: ubuntu-latest
     needs: generate_sync
     steps:
-      - name: 手动触发synchronize_variables.yml
-        uses: actions/checkout@master
+      - uses: actions/checkout@master
 
   # 更新密钥
   sync_secrets:
+    name: 手动触发synchronize_secrets.yml
     runs-on: ubuntu-latest
     needs: generate_sync
     steps:
@@ -68,28 +69,28 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-  post_gen:
-    runs-on: ubuntu-latest
-    needs:
-      - sync_vars
-      - sync_secrets
-    steps:
-      - uses: actions/checkout@master
-        with:
-          persist-credentials: false
-          fetch-depth: 0
+  # post_gen:
+  #   runs-on: ubuntu-latest
+  #   needs:
+  #     - sync_vars
+  #     - sync_secrets
+  #   steps:
+  #     - uses: actions/checkout@master
+  #       with:
+  #         persist-credentials: false
+  #         fetch-depth: 0
 
-      - name: rm dist
-        run: |
-          rm -f .github/variables.yml
-          rm -f .github/secrets.yml
+  #     - name: rm dist
+  #       run: |
+  #         rm -f .github/variables.yml
+  #         rm -f .github/secrets.yml
 
-      - name: completed!
-        uses: Smart-Transportation/push@v1.3
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          branch: 'main'
-          author_email: 'github-actions[bot]@users.noreply.github.com'
-          author_name: 'github-actions[bot]'
-          message: '🐳 chore:Global var and secrets updated!'
-          directory: .
+  #     - name: completed!
+  #       uses: Smart-Transportation/push@v1.3
+  #       with:
+  #         github_token: ${{ secrets.GH_TOKEN }}
+  #         branch: 'main'
+  #         author_email: 'github-actions[bot]@users.noreply.github.com'
+  #         author_name: 'github-actions[bot]'
+  #         message: '🐳 chore:Global var and secrets updated!'
+  #         directory: .

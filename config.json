@@ -23,42 +23,12 @@
         "topic": "BARK",
         "data": {
             "repositories": [
-                "config-server",
-                "xray-parser"
+                "nogfw"
             ],
             "vars": [
-                "VPS_DOMAIN"
+                "BARK_HOST"
             ],
-            "secrets": [
-                "VPS_HOST",
-                "VPS_DOMAIN",
-                "VPS_USER",
-                "VPS_PASS",
-                "VPS_PORT"
-            ]
-        }
-    },
-    {
-        "topic": "VPS",
-        "data": {
-            "repositories": [
-                "config-server",
-                "xray-parser"
-            ],
-            "vars": [
-                "VPS_HOST",
-                "VPS_DOMAIN",
-                "VPS_USER",
-                "VPS_PASS",
-                "VPS_PORT"
-            ],
-            "secrets": [
-                "VPS_HOST",
-                "VPS_DOMAIN",
-                "VPS_USER",
-                "VPS_PASS",
-                "VPS_PORT"
-            ]
+            "secrets": []
         }
     }
 ]
