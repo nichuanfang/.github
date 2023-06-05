@@ -7,10 +7,10 @@ import re
 with open('config.json', encoding='utf-8') as config_f:
     config = json.load(config_f)
     
-with open('.github/templates/variables_gen.yml','r+',encoding='utf-8') as var_tpl_f:
+with open('.github/gen_templates/variables_gen.yml','r+',encoding='utf-8') as var_tpl_f:
     vars_tpl = yaml.load(var_tpl_f,Loader=yaml.SafeLoader)
 
-with open('.github/templates/secrets_gen.yml','r+',encoding='utf-8') as secrets_tpl_f:
+with open('.github/gen_templates/secrets_gen.yml','r+',encoding='utf-8') as secrets_tpl_f:
     secrets_tpl = yaml.load(secrets_tpl_f,yaml.SafeLoader)
 
 vars_steps = []

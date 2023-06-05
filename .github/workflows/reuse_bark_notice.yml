@@ -1,0 +1,34 @@
+name: bark notice
+
+on:
+  workflow_call:
+    inputs:
+      title:
+        required: true
+        type: string
+      body:
+        required: true
+        type: string
+      sound:
+        required: false
+        type: string
+        default: healthnotification
+
+jobs:
+  job1:
+    name: notice
+    runs-on: ubuntu-latest
+    steps:
+      - name: Push notification
+        uses: shink/bark-action@v2
+        continue-on-error: true
+        with:
+          key: ${{ secrets.BARK_KEY }} # Your secret key, it is required
+          host: ${{ vars.BARK_HOST }} # Your Bark host, the default is 'https://api.day.app'
+          title: ${{ inputs.title }}
+          body: ${{ inputs.body }}
+          sound: ${{ inputs.sound }}
+          isArchive: 1
+          # url: https://yuanhaoji.com
+          # automaticallyCopy: 1
+          # copy: Content copied to clipboard
