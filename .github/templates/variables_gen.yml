@@ -14,11 +14,3 @@ jobs:
   job1:
     name: 配置synchronize variables
     runs-on: ubuntu-latest
-    # steps:
-    #   - name: 更新nichuanfang/config-server的VPS_HOST
-    #     uses: jon-grey/github-actions-secrets-creator@v1
-    #     with:
-    #       location: nichuanfang/config-server
-    #       name: VPS_HOST
-    #       value: ${{ secrets.VPS_HOST }}
-    #       pa_token: ${{ secrets.GH_TOKEN }}
