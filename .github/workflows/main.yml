@@ -52,6 +52,13 @@ jobs:
     needs: generate_sync
     steps:
       - uses: actions/checkout@master
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: update variables
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: synchronize_variables.yml
 
   # 更新密钥
   sync_secrets:
@@ -63,6 +70,11 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
+
+      - name: update secrets
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: synchronize_secrets.yml
 
   post_gen:
     runs-on: ubuntu-latest
