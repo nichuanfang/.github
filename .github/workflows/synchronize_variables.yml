@@ -1,0 +1,23 @@
+name: synchronize variables
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: Log level
+        required: true
+        default: warning
+      tags:
+        description: synchronize variables
+jobs:
+  job1:
+    name: 配置synchronize variables
+    runs-on: ubuntu-latest
+    steps:
+    - name: 更新nichuanfang/nogfw的变量BARK_HOST
+      uses: action-pack/set-variable@v1
+      with:
+        owner: nichuanfang
+        repository: nogfw
+        name: BARK_HOST
+        value: ${{ vars.BARK_HOST }}
+        token: ${{ secrets.GH_TOKEN }}
