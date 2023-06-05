@@ -1,4 +1,4 @@
-name: generate sync global vars and secrets files
+name: generate
 
 on:
   repository_dispatch:
