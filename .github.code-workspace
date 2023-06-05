@@ -8,6 +8,9 @@
 		"[python]": {
 			"editor.defaultFormatter": "ms-python.autopep8"
 		},
-		"python.formatting.provider": "none"
+		"python.formatting.provider": "none",
+		"yaml.schemas": {
+			"https://json.schemastore.org/github-workflow.json": "file:///e%3A/workspace/.github/.github/reuse/reuse_bark_notice.yml"
+		}
 	}
 }
