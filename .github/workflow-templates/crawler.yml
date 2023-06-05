@@ -1,0 +1,74 @@
+name: crawler with selenium workflow template
+
+jobs:
+  job1:
+    name:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      # OCR图片识别
+      - uses: actions/cache@v2
+        id: cache-ocr-models
+        with:
+          path: ocr_models
+          key: ${{ runner.os }}-ocr
+          restore-keys: |
+            ${{ runner.os }}-ocr
+
+      # 谷歌浏览器
+      - name: install Chrome
+        uses: browser-actions/setup-chrome@v1
+        # with:
+        #   chrome-version: beta
+
+      - run: |
+          chrome --version
+          which chrome
+
+      # 谷歌浏览器驱动
+      - name: install chromedriver
+        uses: nanasess/setup-chromedriver@v2
+        # with:
+        # Optional: do not specify to match Chrome's version
+        # chromedriver-version: '88.0.4324.96'
+
+      - run: |
+          chromedriver --version
+          which chromedriver
+          mkdir -p /opt/chromedriver/
+          sudo ln -fs /usr/local/bin/chromedriver /opt/chromedriver/chromedriver
+
+      # 准备python环境
+      - name: prepare python environment(v3.11)
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      # 安装pip依赖
+      - name: pip install
+        run: pip install -r requirements.txt
+
+      # 执行python文件
+      - name: execute
+        run: |
+          ls
+
+      # 提交代码
+      - name:
+        uses: Smart-Transportation/push@v1.3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          branch: 'main'
+          author_email: 'f18326186224@gmail.com'
+          author_name: 'nichuanfang'
+          message: '🐳 chore: '
+
+  test_bark_notice:
+    uses: nichuanfang/.github/.github/workflows/reuse_bark_notice.yml@main
+    needs: job1
+    with:
+      title:
+      body:
+    secrets: inherit

@@ -1,0 +1,49 @@
+name: python project workflow template
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        description: ''
+
+jobs:
+  job1:
+    name:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: prepare python environment(v3.11)
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: pip install
+        run: pip install -r requirements.txt
+
+      - name: execute
+        run: |
+
+      - name: git commit
+        uses: Smart-Transportation/push@v1.3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          branch: 'main'
+          author_email: 'f18326186224@gmail.com'
+          author_name: 'nichuanfang'
+          message: '🐳 chore: '
+
+  # BARK通知 可选
+  test_bark_notice:
+    uses: nichuanfang/.github/.github/workflows/reuse_bark_notice.yml@main
+    needs: job1
+    with:
+      title:
+      body:
+    secrets: inherit

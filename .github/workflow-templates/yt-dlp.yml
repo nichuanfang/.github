@@ -1,0 +1,34 @@
+name: yt-dlp with ffmpeg workflow template
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        description: ''
+
+jobs:
+  job1:
+    name:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      # 最佳实践 yt-dlp+ffmpeg
+      - name: Setup yt-dlp
+        uses: AnimMouse/setup-yt-dlp@v1
+        with:
+          with-ffmpeg: true
+
+  # BARK通知 可选
+  test_bark_notice:
+    uses: nichuanfang/.github/.github/workflows/reuse_bark_notice.yml@main
+    needs: job1
+    with:
+      title:
+      body:
+    secrets: inherit
