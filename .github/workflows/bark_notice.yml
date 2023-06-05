@@ -13,9 +13,9 @@ on:
         required: false   #通知声音
         type: string
         default: calypso
-#     secrets:
-#       BARK_KEY:
-#         required: true
+    secrets:
+      BARK_KEY:
+        required: true
 
 
 jobs:
