@@ -47,7 +47,7 @@ jobs:
 
   # 更新变量
   sync_vars:
-    name: 手动触发synchronize_variables.yml
+    name: update variables
     runs-on: ubuntu-latest
     needs: generate_sync
     steps:
@@ -59,10 +59,12 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: synchronize_variables.yml
+          repo: nichuanfang/.github
+          token: ${{ secrets.GH_TOKEN  }}
 
   # 更新密钥
   sync_secrets:
-    name: 手动触发synchronize_secrets.yml
+    name: update secrets
     runs-on: ubuntu-latest
     needs: generate_sync
     steps:
@@ -75,6 +77,8 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: synchronize_secrets.yml
+          repo: nichuanfang/.github
+          token: ${{ secrets.GH_TOKEN  }}
 
   post_gen:
     runs-on: ubuntu-latest
