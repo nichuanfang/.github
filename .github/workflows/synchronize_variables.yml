@@ -13,6 +13,78 @@ jobs:
     name: 配置synchronize variables
     runs-on: ubuntu-latest
     steps:
+    - name: 更新nichuanfang/config-server的变量BARK_HOST
+      uses: action-pack/set-variable@v1
+      with:
+        owner: nichuanfang
+        repository: config-server
+        name: BARK_HOST
+        value: ${{ vars.BARK_HOST }}
+        token: ${{ secrets.GH_TOKEN }}
+    - name: 更新nichuanfang/xray-parser的变量BARK_HOST
+      uses: action-pack/set-variable@v1
+      with:
+        owner: nichuanfang
+        repository: xray-parser
+        name: BARK_HOST
+        value: ${{ vars.BARK_HOST }}
+        token: ${{ secrets.GH_TOKEN }}
+    - name: 更新nichuanfang/docker的变量BARK_HOST
+      uses: action-pack/set-variable@v1
+      with:
+        owner: nichuanfang
+        repository: docker
+        name: BARK_HOST
+        value: ${{ vars.BARK_HOST }}
+        token: ${{ secrets.GH_TOKEN }}
+    - name: 更新nichuanfang/nichuanfang的变量BARK_HOST
+      uses: action-pack/set-variable@v1
+      with:
+        owner: nichuanfang
+        repository: nichuanfang
+        name: BARK_HOST
+        value: ${{ vars.BARK_HOST }}
+        token: ${{ secrets.GH_TOKEN }}
+    - name: 更新nichuanfang/nichuanfang.github.io的变量BARK_HOST
+      uses: action-pack/set-variable@v1
+      with:
+        owner: nichuanfang
+        repository: nichuanfang.github.io
+        name: BARK_HOST
+        value: ${{ vars.BARK_HOST }}
+        token: ${{ secrets.GH_TOKEN }}
+    - name: 更新nichuanfang/hexo-blog的变量BARK_HOST
+      uses: action-pack/set-variable@v1
+      with:
+        owner: nichuanfang
+        repository: hexo-blog
+        name: BARK_HOST
+        value: ${{ vars.BARK_HOST }}
+        token: ${{ secrets.GH_TOKEN }}
+    - name: 更新nichuanfang/crawler的变量BARK_HOST
+      uses: action-pack/set-variable@v1
+      with:
+        owner: nichuanfang
+        repository: crawler
+        name: BARK_HOST
+        value: ${{ vars.BARK_HOST }}
+        token: ${{ secrets.GH_TOKEN }}
+    - name: 更新nichuanfang/nginx-config的变量BARK_HOST
+      uses: action-pack/set-variable@v1
+      with:
+        owner: nichuanfang
+        repository: nginx-config
+        name: BARK_HOST
+        value: ${{ vars.BARK_HOST }}
+        token: ${{ secrets.GH_TOKEN }}
+    - name: 更新nichuanfang/MyScripts的变量BARK_HOST
+      uses: action-pack/set-variable@v1
+      with:
+        owner: nichuanfang
+        repository: MyScripts
+        name: BARK_HOST
+        value: ${{ vars.BARK_HOST }}
+        token: ${{ secrets.GH_TOKEN }}
     - name: 更新nichuanfang/nogfw的变量BARK_HOST
       uses: action-pack/set-variable@v1
       with:
