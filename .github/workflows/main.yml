@@ -59,9 +59,6 @@ jobs:
           repo: nichuanfang/.github
           token: ${{ secrets.GH_TOKEN  }}
 
-      # - name: wait
-      #   run: sleep 5
-
   # 更新密钥
   sync_secrets:
     name: update secrets
@@ -76,29 +73,3 @@ jobs:
           workflow: synchronize_secrets.yml
           repo: nichuanfang/.github
           token: ${{ secrets.GH_TOKEN  }}
-
-      # - name: wait
-      #   run: sleep 5
-
-  post_gen:
-    runs-on: ubuntu-latest
-    needs:
-      - sync_vars
-      - sync_secrets
-    steps:
-      - uses: actions/checkout@master
-
-      - name: rm dist
-        run: |
-          rm -f .github/workflows/synchronize_variables.yml
-          rm -f .github/workflows/synchronize_secrets.yml
-
-      - name: completed!
-        uses: Smart-Transportation/push@v1.3
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          branch: 'main'
-          author_email: 'f18326186224'
-          author_name: 'nichuanfang'
-          message: '🐳 chore:Global var and secrets updated!'
-          directory: .
