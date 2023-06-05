@@ -1,2 +1,1 @@
-# .github
-reusable workflow repo
+集中管理同一个账户下的变量和密钥 类似orgnization中的工作流共享
