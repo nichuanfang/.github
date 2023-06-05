@@ -1,4 +1,4 @@
-name: sync global vars and secrets
+name: generate sync global vars and secrets files
 
 on:
   repository_dispatch:
@@ -10,7 +10,7 @@ on:
         required: true
         default: 'warning'
       tags:
-        description: 'sync global vars and secrets'
+        description: 'generate sync global vars and secrets'
 
 jobs:
   generate_sync:
@@ -50,8 +50,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: generate_sync
     steps:
-      - uses: actions/checkout@master
-
       - name: update variables
         uses: benc-uk/workflow-dispatch@v1
         with:
@@ -65,8 +63,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: generate_sync
     steps:
-      - uses: actions/checkout@master
-
       - name: update secrets
         uses: benc-uk/workflow-dispatch@v1
         with:
