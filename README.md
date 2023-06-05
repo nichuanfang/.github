@@ -1,8 +1,8 @@
-## 集中管理同一个账户下的变量和密钥 类似orgnization中的工作流共享
+## 集中管理同一个账户下的变量和密钥
 
 >使用步骤
 
-1.  编辑config.json 
+1.  编辑[`config.json`](https://github.com/nichuanfang/.github/blob/main/config.json)
 ```
 topic: 当前区块的主要分类
 repositories: 配置的变量和密钥应用到哪些仓库
