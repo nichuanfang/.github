@@ -22,23 +22,18 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-      - name: Dump context
-        uses: utenx/gh-dump-context@v1
+      - name: prepare python environment(v3.11)
+        uses: actions/setup-python@v4
         with:
-          context: github
+          python-version: '3.11'
+          cache: 'pip'
 
-      # - name: prepare python environment(v3.11)
-      #   uses: actions/setup-python@v4
-      #   with:
-      #     python-version: '3.11'
-      #     cache: 'pip'
+      - name: pip install
+        run: pip install -r requirements.txt
 
-      # - name: pip install
-      #   run: pip install -r requirements.txt
-
-      # - name: generate_sync
-      #   run: |
-      #     python main.py
+      - name: generate_sync
+        run: |
+          python main.py
 
       - name: update project
         uses: Smart-Transportation/push@v1.3
