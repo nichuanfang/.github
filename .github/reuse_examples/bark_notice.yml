@@ -1,6 +1,6 @@
 bark_notice:
-  uses: nichuanfang/.github/.github/workflows/reuse_bark_notice.yml@main
-  with:
-    title: 推送标题
-    body: 推送内容
-  secrets: inherit
+    uses: nichuanfang/.github/.github/workflows/reuse_bark_notice.yml@main
+    with:
+      title: 推送标题
+      body: 推送内容
+    secrets: inherit
