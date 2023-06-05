@@ -28,7 +28,9 @@
             "vars": [
                 "BARK_HOST"
             ],
-            "secrets": []
+            "secrets": [
+                "BARK_KEY"
+            ]
         }
     }
 ]
