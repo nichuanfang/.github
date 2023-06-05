@@ -1,0 +1,64 @@
+[
+    {
+        "topic": "GITHUB",
+        "data": {
+            "repositories": [
+                "config-server",
+                "xray-parser",
+                "docker",
+                "nichuanfang",
+                "nichuanfang.github.io",
+                "hexo-blog",
+                "crawler",
+                "nginx-config",
+                "MyScripts"
+            ],
+            "vars": [],
+            "secrets": [
+                "GH_TOKEN"
+            ]
+        }
+    },
+    {
+        "topic": "BARK",
+        "data": {
+            "repositories": [
+                "config-server",
+                "xray-parser"
+            ],
+            "vars": [
+                "VPS_DOMAIN"
+            ],
+            "secrets": [
+                "VPS_HOST",
+                "VPS_DOMAIN",
+                "VPS_USER",
+                "VPS_PASS",
+                "VPS_PORT"
+            ]
+        }
+    },
+    {
+        "topic": "VPS",
+        "data": {
+            "repositories": [
+                "config-server",
+                "xray-parser"
+            ],
+            "vars": [
+                "VPS_HOST",
+                "VPS_DOMAIN",
+                "VPS_USER",
+                "VPS_PASS",
+                "VPS_PORT"
+            ],
+            "secrets": [
+                "VPS_HOST",
+                "VPS_DOMAIN",
+                "VPS_USER",
+                "VPS_PASS",
+                "VPS_PORT"
+            ]
+        }
+    }
+]
