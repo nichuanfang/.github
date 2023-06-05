@@ -42,5 +42,30 @@
                 "BARK_KEY"
             ]
         }
+    },
+    {
+        "topic": "VPS",
+        "data": {
+            "repositories": [
+                "config-server",
+                "xray-parser",
+                "docker",
+                "nichuanfang",
+                "nichuanfang.github.io",
+                "hexo-blog",
+                "crawler",
+                "nginx-config",
+                "MyScripts",
+                "nogfw"
+            ],
+            "vars": [],
+            "secrets": [
+                "VPS_HOST",
+                "VPS_DOMAIN",
+                "VPS_USER",
+                "VPS_PASS",
+                "VPS_PORT"
+            ]
+        }
     }
 ]
