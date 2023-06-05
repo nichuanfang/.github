@@ -11,7 +11,8 @@
                 "hexo-blog",
                 "crawler",
                 "nginx-config",
-                "MyScripts"
+                "MyScripts",
+                "nogfw"
             ],
             "vars": [],
             "secrets": [
@@ -23,6 +24,15 @@
         "topic": "BARK",
         "data": {
             "repositories": [
+                "config-server",
+                "xray-parser",
+                "docker",
+                "nichuanfang",
+                "nichuanfang.github.io",
+                "hexo-blog",
+                "crawler",
+                "nginx-config",
+                "MyScripts",
                 "nogfw"
             ],
             "vars": [
