@@ -12,7 +12,8 @@
                 "crawler",
                 "nginx-config",
                 "MyScripts",
-                "nogfw"
+                "nogfw",
+                "movie-tvshow-spider"
             ],
             "vars": [],
             "secrets": [
@@ -33,7 +34,8 @@
                 "crawler",
                 "nginx-config",
                 "MyScripts",
-                "nogfw"
+                "nogfw",
+                "movie-tvshow-spider"
             ],
             "vars": [
                 "BARK_HOST"
