@@ -13,7 +13,8 @@
                 "nginx-config",
                 "MyScripts",
                 "nogfw",
-                "movie-tvshow-spider"
+                "movie-tvshow-spider",
+                "wechat-girlfriend-push"
             ],
             "vars": [],
             "secrets": [
