@@ -14,7 +14,8 @@
                 "MyScripts",
                 "nogfw",
                 "movie-tvshow-spider",
-                "wechat-girlfriend-push"
+                "wechat-girlfriend-push",
+                "blog-docs-next "
             ],
             "vars": [],
             "secrets": [
@@ -36,7 +37,8 @@
                 "nginx-config",
                 "MyScripts",
                 "nogfw",
-                "movie-tvshow-spider"
+                "movie-tvshow-spider",
+                "blog-docs-next "
             ],
             "vars": [
                 "BARK_HOST"
@@ -59,7 +61,8 @@
                 "crawler",
                 "nginx-config",
                 "MyScripts",
-                "nogfw"
+                "nogfw",
+                "blog-docs-next "
             ],
             "vars": [],
             "secrets": [
