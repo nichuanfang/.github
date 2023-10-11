@@ -16,7 +16,8 @@
                 "movie-tvshow-spider",
                 "wechat-girlfriend-push",
                 "blog-docs-next ",
-                "tgbot"
+                "tgbot",
+                "music-tool-kit"
             ],
             "vars": [],
             "secrets": [
