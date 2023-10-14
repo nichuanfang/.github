@@ -17,7 +17,8 @@
                 "wechat-girlfriend-push",
                 "blog-docs-next ",
                 "tgbot",
-                "music-tool-kit"
+                "music-tool-kit",
+                "AutoReleaseChangelog"
             ],
             "vars": [],
             "secrets": [
