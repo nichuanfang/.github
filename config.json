@@ -9,7 +9,6 @@
                 "nichuanfang",
                 "nichuanfang.github.io",
                 "hexo-blog",
-                "crawler",
                 "nginx-config",
                 "MyScripts",
                 "nogfw",
@@ -18,7 +17,6 @@
                 "blog-docs-next ",
                 "tgbot",
                 "music-tool-kit",
-                "AutoReleaseChangelog"
             ],
             "vars": [],
             "secrets": [
