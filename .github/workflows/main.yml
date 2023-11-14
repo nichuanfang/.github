@@ -2,7 +2,8 @@ name: generate and sync
 
 on:
   repository_dispatch:
-    types: [update_topic]
+    # 更新主题仓库 更新主题变量 更新主题密钥
+    types: [tgbot_trigger]
   # 手动触发
   workflow_dispatch:
     inputs:
@@ -73,10 +74,13 @@ jobs:
           repo: nichuanfang/.github
           token: ${{ secrets.GH_TOKEN  }}
 
+  # ==========================通过tgbot触发==========================
+
   # 更新主题
-  update_topic:
+  update_topic_repo:
     runs-on: ubuntu-latest
-    if: github.event_name == 'repository_dispatch'
+    # 如果是repository_dispatch的type为update_topic_repo
+    if: github.event_name == 'repository_dispatch' && github.event.client_payload.type == 'update_topic_repo'
     steps:
       - uses: actions/checkout@master
         with:

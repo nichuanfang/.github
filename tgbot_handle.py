@@ -1,4 +1,4 @@
-# 更新主题
+# 处理tgbot的请求
 import sys
 
 # 主题数据
