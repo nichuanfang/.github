@@ -101,11 +101,19 @@ jobs:
         name: BARK_HOST
         value: ${{ vars.BARK_HOST }}
         token: ${{ secrets.GH_TOKEN }}
-    - name: 更新nichuanfang/blog-docs-next 的变量BARK_HOST
+    - name: 更新nichuanfang/blog-docs-next的变量BARK_HOST
       uses: action-pack/set-variable@v1
       with:
         owner: nichuanfang
-        repository: 'blog-docs-next '
+        repository: blog-docs-next
+        name: BARK_HOST
+        value: ${{ vars.BARK_HOST }}
+        token: ${{ secrets.GH_TOKEN }}
+    - name: 更新nichuanfang/tgbot的变量BARK_HOST
+      uses: action-pack/set-variable@v1
+      with:
+        owner: nichuanfang
+        repository: tgbot
         name: BARK_HOST
         value: ${{ vars.BARK_HOST }}
         token: ${{ secrets.GH_TOKEN }}
