@@ -96,9 +96,8 @@ jobs:
       - name: pip install
         run: pip install -r requirements.txt
 
-      - name: generate_sync
+      - name: update topic
         env:
-          PAYLOAD_TYPE: ${{ github.event.client_payload.type }}
           TOPIC_PAYLOAD: ${{ github.event.client_payload.topic_payload }}
         run: |
-          python tgbot_handle.py  $PAYLOAD_TYPE  $TOPIC_PAYLOAD
+          python tgbot_handle.py  $TOPIC_PAYLOAD
