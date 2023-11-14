@@ -30,7 +30,7 @@ type = topic_payload['type']
 
 if type == PayloadType.UPDATE_TOPIC_REPO:
     # 更新主题仓库
-    pass
+    print(topic_payload['topic'])
 elif type == PayloadType.UPDATE_TOPIC_VAR:
     # 更新主题变量
     pass    
