@@ -27,7 +27,7 @@ if type == PayloadType.UPDATE_TOPIC_REPO:
     repositories = topic_payload['repositories']
     # 是添加还是更新 add / update
     topic_update_type = topic_payload['topic_update_type']
-    if topic_update_type == UpdateType.ADD:
+    if topic_update_type == UpdateType.TOPIC_ADD:
         # 新增主题仓库
         config.append({
             'topic': topic_payload['topic'],
@@ -37,7 +37,7 @@ if type == PayloadType.UPDATE_TOPIC_REPO:
                 'secrets': []
                 }
         })
-    elif topic_update_type == UpdateType.UPDATE:
+    elif topic_update_type == UpdateType.TOPIC_REPO_ADD or topic_update_type == UpdateType.TOPIC_REPO_DELETE:
         # 更新主题仓库
         for item in config:
             topic = item['topic']
