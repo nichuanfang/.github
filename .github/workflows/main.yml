@@ -3,7 +3,7 @@ name: generate and sync
 on:
   repository_dispatch:
     # 更新主题仓库 更新主题变量 更新主题密钥
-    types: [tgbot_trigger]
+    types: [update_topic_repo, update_topic_var, update_topic_secret]
   # 手动触发
   workflow_dispatch:
     inputs:
@@ -98,6 +98,7 @@ jobs:
 
       - name: generate_sync
         env:
-          TOPIC_DATA: ${{ github.event.client_payload.topic_payload }}
+          PAYLOAD_TYPE: ${{ github.event.client_payload.type }}
+          TOPIC_PAYLOAD: ${{ github.event.client_payload.topic_payload }}
         run: |
-          python update_topic.py  $TOPIC_DATA
+          python tgbot_handle.py  $PAYLOAD_TYPE  $TOPIC_PAYLOAD
