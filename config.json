@@ -98,10 +98,7 @@
         "topic": "哈哈",
         "data": {
             "vars": [],
-            "repositories": [
-                "test2",
-                "SODIF"
-            ],
+            "repositories": [],
             "secrets": []
         }
     }
