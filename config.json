@@ -93,5 +93,15 @@
                 "CLASH_SUBSCRIBE_ID"
             ]
         }
+    },
+    {
+        "topic": "Test",
+        "data": {
+            "vars": [],
+            "repositories": [
+                "HHH"
+            ],
+            "secrets": []
+        }
     }
 ]
