@@ -98,6 +98,6 @@ jobs:
 
       - name: generate_sync
         env:
-          TOPIC_DATA: ${{ github.event.client_payload.topic_data }}
+          TOPIC_DATA: ${{ github.event.client_payload.topic_payload }}
         run: |
           python update_topic.py  $TOPIC_DATA
