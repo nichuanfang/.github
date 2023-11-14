@@ -40,8 +40,7 @@
                 "nogfw",
                 "movie-tvshow-spider",
                 "blog-docs-next",
-                "tgbot",
-                "/update_topic_repos"
+                "tgbot"
             ],
             "vars": [
                 "BARK_HOST"
