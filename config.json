@@ -39,7 +39,8 @@
                 "MyScripts",
                 "nogfw",
                 "movie-tvshow-spider",
-                "blog-docs-next "
+                "blog-docs-next",
+                "tgbot"
             ],
             "vars": [
                 "BARK_HOST"
@@ -72,7 +73,24 @@
                 "VPS_DOMAIN",
                 "VPS_USER",
                 "VPS_PASS",
-                "VPS_PORT"
+                "VPS_PORT",
+                "VPS_CONFIG_USER",
+                "VPS_CONFIG_PASS"
+            ]
+        }
+    },
+    {
+        "topic": "GIST",
+        "data": {
+            "repositories": [
+                "config-server",
+                "nogfw"
+            ],
+            "vars": [],
+            "secrets": [
+                "QX_SUBSCRIBE_ID",
+                "QX_CONFIG_GIST_ID",
+                "CLASH_SUBSCRIBE_ID"
             ]
         }
     }
