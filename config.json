@@ -93,13 +93,5 @@
                 "CLASH_SUBSCRIBE_ID"
             ]
         }
-    },
-    {
-        "topic": "哈哈",
-        "data": {
-            "vars": [],
-            "repositories": [],
-            "secrets": []
-        }
     }
 ]
