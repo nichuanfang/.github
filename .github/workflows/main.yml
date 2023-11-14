@@ -101,3 +101,13 @@ jobs:
           TOPIC_PAYLOAD: ${{ github.event.client_payload.topic_payload }}
         run: |
           python tgbot_handle.py  $TOPIC_PAYLOAD
+
+      - name: 更新.github项目
+        uses: Smart-Transportation/push@v1.3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          branch: 'main'
+          author_email: 'github-actions[bot]@users.noreply.github.com'
+          author_name: 'github-actions[bot]'
+          message: '🐳 chore: 更新主题配置文件'
+          repository: nichuanfang/.github
