@@ -99,7 +99,8 @@
         "data": {
             "vars": [],
             "repositories": [
-                "test2"
+                "test2",
+                "SODIF"
             ],
             "secrets": []
         }
