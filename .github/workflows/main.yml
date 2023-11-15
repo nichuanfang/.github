@@ -1,9 +1,6 @@
 name: generate and sync
 
 on:
-  repository_dispatch:
-    # 更新主题仓库 更新主题变量 更新主题密钥
-    types: [update_topic_repo, update_topic_var, update_topic_secret]
   # 手动触发
   workflow_dispatch:
     inputs:
@@ -17,8 +14,6 @@ on:
 jobs:
   generate_sync:
     runs-on: ubuntu-latest
-    # 如果不是repository_dispatch
-    if: github.event_name != 'repository_dispatch'
     steps:
       - uses: actions/checkout@master
         with:
@@ -73,46 +68,6 @@ jobs:
           workflow: synchronize_secrets.yml
           repo: nichuanfang/.github
           token: ${{ secrets.GH_TOKEN  }}
-
-  # ==========================通过tgbot触发==========================
-
-  # 更新主题
-  update_topic_repo:
-    runs-on: ubuntu-latest
-    # 如果是repository_dispatch的type为update_topic_repo
-    permissions:
-      contents: write
-    if: github.event_name == 'repository_dispatch'
-    steps:
-      - uses: actions/checkout@master
-        with:
-          persist-credentials: false
-          fetch-depth: 0
-
-      - name: prepare python environment(v3.11)
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
-      - name: pip install
-        run: pip install -r requirements.txt
-
-      - name: update topic
-        env:
-          TOPIC_PAYLOAD: ${{ github.event.client_payload.topic_payload }}
-        run: |
-          python tgbot_handle.py  $TOPIC_PAYLOAD
-
-      - name: 更新.github项目
-        uses: Smart-Transportation/push@v1.3
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          branch: 'main'
-          author_email: 'github-actions[bot]@users.noreply.github.com'
-          author_name: 'github-actions[bot]'
-          message: '🐳 chore: 更新主题配置文件'
-          repository: nichuanfang/.github
 
       - name: Push notification
         env:
