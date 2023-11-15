@@ -78,20 +78,5 @@
                 "VPS_CONFIG_PASS"
             ]
         }
-    },
-    {
-        "topic": "GIST",
-        "data": {
-            "repositories": [
-                "config-server",
-                "nogfw"
-            ],
-            "vars": [],
-            "secrets": [
-                "QX_SUBSCRIBE_ID",
-                "QX_CONFIG_GIST_ID",
-                "CLASH_SUBSCRIBE_ID"
-            ]
-        }
     }
 ]
