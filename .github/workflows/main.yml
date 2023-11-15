@@ -1,6 +1,8 @@
 name: generate and sync
 
 on:
+  push:
+    paths: [".github/workflows/main.yml"]
   # 手动触发
   workflow_dispatch:
     inputs:
