@@ -1,83 +1,96 @@
 [
-    {
-        "topic": "GITHUB",
-        "data": {
-            "repositories": [
-                "config-server",
-                "xray-parser",
-                "docker",
-                "nichuanfang",
-                "nichuanfang.github.io",
-                "hexo-blog",
-                "nginx-config",
-                "MyScripts",
-                "nogfw",
-                "movie-tvshow-spider",
-                "wechat-girlfriend-push",
-                "blog-docs-next ",
-                "tgbot",
-                "music-tool-kit",
-                "bitwarden-backup"
-            ],
-            "vars": [],
-            "secrets": [
-                "GH_TOKEN"
-            ]
-        }
-    },
-    {
-        "topic": "BARK",
-        "data": {
-            "repositories": [
-                "config-server",
-                "xray-parser",
-                "docker",
-                "nichuanfang",
-                "nichuanfang.github.io",
-                "hexo-blog",
-                "crawler",
-                "nginx-config",
-                "MyScripts",
-                "nogfw",
-                "movie-tvshow-spider",
-                "blog-docs-next",
-                "tgbot"
-            ],
-            "vars": [
-                "BARK_HOST"
-            ],
-            "secrets": [
-                "BARK_KEY"
-            ]
-        }
-    },
-    {
-        "topic": "VPS",
-        "data": {
-            "repositories": [
-                "config-server",
-                "xray-parser",
-                "docker",
-                "nichuanfang",
-                "nichuanfang.github.io",
-                "hexo-blog",
-                "crawler",
-                "nginx-config",
-                "MyScripts",
-                "nogfw",
-                "blog-docs-next ",
-                "tgbot"
-            ],
-            "vars": [],
-            "secrets": [
-                "VPS_HOST",
-                "VPS_DOMAIN",
-                "VPS_USER",
-                "VPS_PASS",
-                "VPS_PORT",
-                "VPS_CONFIG_USER",
-                "VPS_CONFIG_PASS"
-            ]
-        }
+  {
+    "topic": "GITHUB",
+    "data": {
+      "repositories": [
+        "config-server",
+        "xray-parser",
+        "docker",
+        "nichuanfang",
+        "nichuanfang.github.io",
+        "hexo-blog",
+        "nginx-config",
+        "MyScripts",
+        "nogfw",
+        "movie-tvshow-spider",
+        "wechat-girlfriend-push",
+        "blog-docs-next ",
+        "tgbot",
+        "music-tool-kit",
+        "bitwarden-backup",
+        "hexo-blog-vercel"
+      ],
+      "vars": [],
+      "secrets": [
+        "GH_TOKEN"
+      ]
     }
+  },
+  {
+    "topic": "BARK",
+    "data": {
+      "repositories": [
+        "config-server",
+        "xray-parser",
+        "docker",
+        "nichuanfang",
+        "nichuanfang.github.io",
+        "hexo-blog",
+        "crawler",
+        "nginx-config",
+        "MyScripts",
+        "nogfw",
+        "movie-tvshow-spider",
+        "blog-docs-next",
+        "tgbot"
+      ],
+      "vars": [
+        "BARK_HOST"
+      ],
+      "secrets": [
+        "BARK_KEY"
+      ]
+    }
+  },
+  {
+    "topic": "VPS",
+    "data": {
+      "repositories": [
+        "config-server",
+        "xray-parser",
+        "docker",
+        "nichuanfang",
+        "nichuanfang.github.io",
+        "hexo-blog",
+        "crawler",
+        "nginx-config",
+        "MyScripts",
+        "nogfw",
+        "blog-docs-next ",
+        "tgbot"
+      ],
+      "vars": [],
+      "secrets": [
+        "VPS_HOST",
+        "VPS_DOMAIN",
+        "VPS_USER",
+        "VPS_PASS",
+        "VPS_PORT",
+        "VPS_CONFIG_USER",
+        "VPS_CONFIG_PASS"
+      ]
+    }
+  },
+  {
+    "topic": "VERCEL",
+    "data": {
+      "repositories": [
+        "hexo-blog-vercel"
+      ],
+      "vars": [],
+      "secrets": [
+          "VERCEL_TOKEN"
+      ]
+    }
+  }
 ]
