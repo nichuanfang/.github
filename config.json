@@ -18,7 +18,8 @@
         "tgbot",
         "music-tool-kit",
         "bitwarden-backup",
-        "hexo-blog-vercel"
+        "hexo-blog-vercel",
+        "blog-docs-next-vercel"
       ],
       "vars": [],
       "secrets": [
@@ -85,7 +86,8 @@
     "topic": "VERCEL",
     "data": {
       "repositories": [
-        "hexo-blog-vercel"
+        "hexo-blog-vercel",
+        "blog-docs-next-vercel"
       ],
       "vars": [],
       "secrets": [
