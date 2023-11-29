@@ -18,7 +18,8 @@
         "tgbot",
         "music-tool-kit",
         "bitwarden-backup",
-        "hexo-blog-vercel"
+        "hexo-blog-vercel",
+        "api"
       ],
       "vars": [],
       "secrets": [
@@ -42,7 +43,8 @@
         "nogfw",
         "movie-tvshow-spider",
         "blog-docs-next",
-        "tgbot"
+        "tgbot",
+        "api"
       ],
       "vars": [
         "BARK_HOST"
@@ -67,7 +69,8 @@
         "MyScripts",
         "nogfw",
         "blog-docs-next ",
-        "tgbot"
+        "tgbot",
+        "api"
       ],
       "vars": [],
       "secrets": [
