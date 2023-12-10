@@ -125,3 +125,11 @@ jobs:
         name: BARK_HOST
         value: ${{ vars.BARK_HOST }}
         token: ${{ secrets.GH_TOKEN }}
+    - name: 更新nichuanfang/trakt的变量BARK_HOST
+      uses: action-pack/set-variable@v1
+      with:
+        owner: nichuanfang
+        repository: trakt
+        name: BARK_HOST
+        value: ${{ vars.BARK_HOST }}
+        token: ${{ secrets.GH_TOKEN }}
