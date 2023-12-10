@@ -96,7 +96,8 @@
       "vars": [],
       "secrets": [
         "TRAKT_CLIENT_ID",
-        "TRAKT_CLIENT_SECRET"
+        "TRAKT_CLIENT_SECRET",
+        "TRAKT_USER"
       ]
     }
   },
