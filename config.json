@@ -19,7 +19,8 @@
         "music-tool-kit",
         "bitwarden-backup",
         "hexo-blog-vercel",
-        "api"
+        "api",
+        "trakt"
       ],
       "vars": [],
       "secrets": [
@@ -44,7 +45,8 @@
         "movie-tvshow-spider",
         "blog-docs-next",
         "tgbot",
-        "api"
+        "api",
+        "trakt"
       ],
       "vars": [
         "BARK_HOST"
@@ -85,14 +87,34 @@
     }
   },
   {
-    "topic": "VERCEL",
+    "topic": "TRAKT",
     "data": {
       "repositories": [
-        "hexo-blog-vercel"
+        "trakt",
+        "api"
       ],
       "vars": [],
       "secrets": [
-          "VERCEL_TOKEN"
+        "TRAKT_CLIENT_ID",
+        "TRAKT_CLIENT_SECRET"
+      ]
+    }
+  },
+  {
+    "topic": "TGBOT",
+    "data": {
+      "repositories": [
+        "tgbot",
+        "movie-tvshow-spider",
+        "api",
+        "trakt"
+      ],
+      "vars": [],
+      "secrets": [
+        "GITHUB_BOT_TOKEN",
+        "DOGYUN_BOT_TOKEN",
+        "TMDB_BOT_TOKEN",
+        "TRAIN_BOT_TOKEN"
       ]
     }
   }
