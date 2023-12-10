@@ -119,5 +119,20 @@
         "TRAIN_BOT_TOKEN"
       ]
     }
+  },
+  {
+    "topic": "TURSO",
+    "data": {
+      "repositories": [
+        "movie-tvshow-spider",
+        "api",
+        "trakt"
+      ],
+      "vars": [],
+      "secrets": [
+        "TURSO_DB_URL",
+        "TURSO_DB_AUTH_TOKEN"
+      ]
+    }
   }
 ]
