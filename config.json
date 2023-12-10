@@ -111,6 +111,7 @@
       ],
       "vars": [],
       "secrets": [
+        "TG_CHAT_ID",
         "GH_BOT_TOKEN",
         "DOGYUN_BOT_TOKEN",
         "TMDB_BOT_TOKEN",
