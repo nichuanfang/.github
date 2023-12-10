@@ -111,7 +111,7 @@
       ],
       "vars": [],
       "secrets": [
-        "GITHUB_BOT_TOKEN",
+        "GH_BOT_TOKEN",
         "DOGYUN_BOT_TOKEN",
         "TMDB_BOT_TOKEN",
         "TRAIN_BOT_TOKEN"
