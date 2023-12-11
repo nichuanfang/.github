@@ -134,5 +134,18 @@
         "TURSO_DB_AUTH_TOKEN"
       ]
     }
+  },
+   {
+    "topic": "TMDB",
+    "data": {
+      "repositories": [
+        "tgbot",
+        "trakt"
+      ],
+      "vars": [],
+      "secrets": [
+        "TMDB_API_KEY"
+      ]
+    }
   }
 ]
