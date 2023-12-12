@@ -72,7 +72,8 @@
         "nogfw",
         "blog-docs-next ",
         "tgbot",
-        "api"
+        "api",
+        "trakt"
       ],
       "vars": [],
       "secrets": [
