@@ -20,7 +20,8 @@
         "bitwarden-backup",
         "hexo-blog-vercel",
         "api",
-        "trakt"
+        "trakt",
+        "telegram-bot"
       ],
       "vars": [],
       "secrets": [
@@ -46,7 +47,8 @@
         "blog-docs-next",
         "tgbot",
         "api",
-        "trakt"
+        "trakt",
+        "telegram-bot"
       ],
       "vars": [
         "BARK_HOST"
@@ -73,7 +75,8 @@
         "blog-docs-next ",
         "tgbot",
         "api",
-        "trakt"
+        "trakt",
+        "telegram-bot"
       ],
       "vars": [],
       "secrets": [
@@ -127,7 +130,8 @@
       "repositories": [
         "movie-tvshow-spider",
         "api",
-        "trakt"
+        "trakt",
+        "telegram-bot"
       ],
       "vars": [],
       "secrets": [
