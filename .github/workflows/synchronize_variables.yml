@@ -109,14 +109,6 @@ jobs:
         name: BARK_HOST
         value: ${{ vars.BARK_HOST }}
         token: ${{ secrets.GH_TOKEN }}
-    - name: 更新nichuanfang/tgbot的变量BARK_HOST
-      uses: action-pack/set-variable@v1
-      with:
-        owner: nichuanfang
-        repository: tgbot
-        name: BARK_HOST
-        value: ${{ vars.BARK_HOST }}
-        token: ${{ secrets.GH_TOKEN }}
     - name: 更新nichuanfang/api的变量BARK_HOST
       uses: action-pack/set-variable@v1
       with:
