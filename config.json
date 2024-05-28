@@ -115,8 +115,8 @@
       ],
       "vars": [],
       "secrets": [
-        "GITHUB_WORKFLOW_BOT_CHAT_ID",
-        "GITHUB_WORKFLOW_BOT_TOKEN",
+        "GH_BOT_CHAT_ID",
+        "GH_BOT_TOKEN",
         "DOGYUN_BOT_TOKEN",
         "TMDB_BOT_TOKEN",
         "GPT_BOT_TOKEN"
