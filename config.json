@@ -73,7 +73,6 @@
         "MyScripts",
         "nogfw",
         "blog-docs-next ",
-        "tgbot",
         "api",
         "trakt",
         "telegram-bot"
@@ -95,7 +94,8 @@
     "data": {
       "repositories": [
         "trakt",
-        "api"
+        "api",
+        "telegram-bot"
       ],
       "vars": [],
       "secrets": [
@@ -109,18 +109,18 @@
     "topic": "TGBOT",
     "data": {
       "repositories": [
-        "tgbot",
+        "telegram-bot",
         "movie-tvshow-spider",
         "api",
         "trakt"
       ],
       "vars": [],
       "secrets": [
-        "TG_CHAT_ID",
-        "GH_BOT_TOKEN",
+        "GITHUB_WORKFLOW_BOT_CHAT_ID",
+        "GITHUB_WORKFLOW_BOT_TOKEN",
         "DOGYUN_BOT_TOKEN",
         "TMDB_BOT_TOKEN",
-        "TRAIN_BOT_TOKEN"
+        "GPT_BOT_TOKEN"
       ]
     }
   },
@@ -144,7 +144,7 @@
     "topic": "TMDB",
     "data": {
       "repositories": [
-        "tgbot",
+        "telegram-bot",
         "trakt"
       ],
       "vars": [],
