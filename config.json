@@ -73,7 +73,8 @@
         "blog-docs-next ",
         "api",
         "trakt",
-        "telegram-bot"
+        "telegram-bot",
+        "doc"
       ],
       "vars": [],
       "secrets": [
